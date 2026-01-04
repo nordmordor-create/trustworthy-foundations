@@ -8,7 +8,7 @@ const About = () => {
           <div>
             <div className="accent-line mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Сущность компании
+              Наши принципы
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Строительная компания Максима Терехичева — это системный подход к частному жилью.
