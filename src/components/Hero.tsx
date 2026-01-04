@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="accent-line mb-8" />
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Инженерное частное домостроение
+            Частные качественные дома для жизни в 20 минутах от г.Пермь
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">

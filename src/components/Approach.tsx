@@ -1,26 +1,34 @@
-import { Layers, Home, Zap, Droplets, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
+import stepFoundation from "@/assets/step-foundation.jpg";
+import stepWalls from "@/assets/step-walls.jpg";
+import stepRoof from "@/assets/step-roof.jpg";
+import stepUtilities from "@/assets/step-utilities.jpg";
 
 const Approach = () => {
-  const features = [
+  const steps = [
     {
-      icon: <Layers className="w-6 h-6" />,
+      image: stepFoundation,
+      number: "01",
+      title: "Фундамент",
+      description: "Проектирование под конкретные условия участка. Ленточный или монолитный фундамент с полной гидроизоляцией."
+    },
+    {
+      image: stepWalls,
+      number: "02",
       title: "Стены — пеноблок",
-      description: "Надежный материал с отличными теплоизоляционными свойствами"
+      description: "Надежный материал с отличными теплоизоляционными свойствами. Толщина стен 400 мм для комфортного микроклимата."
     },
     {
-      icon: <Home className="w-6 h-6" />,
-      title: "Надежный фундамент",
-      description: "Проектирование под конкретные условия участка"
+      image: stepRoof,
+      number: "03",
+      title: "Кровля",
+      description: "Металлочерепица или мягкая кровля. Полная теплоизоляция и вентиляция подкровельного пространства."
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Электричество 15 кВт",
-      description: "Полноценное подключение к электросетям"
-    },
-    {
-      icon: <Droplets className="w-6 h-6" />,
-      title: "Вода и асфальт",
-      description: "Коммуникации и подъезд до участка"
+      image: stepUtilities,
+      number: "04",
+      title: "Коммуникации",
+      description: "Электричество 15 кВт, водоснабжение, канализация. Полная разводка по дому под ключ."
     }
   ];
 
@@ -37,23 +45,38 @@ const Approach = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="card-architectural flex flex-col items-start"
-            >
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-4">
-                {feature.icon}
+        {/* Visual Steps Timeline */}
+        <div className="relative">
+          {/* Connection line */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 z-0" />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div 
+                key={index}
+                className="relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 z-10"
+              >
+                <div className="aspect-square overflow-hidden bg-secondary/30">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-3xl font-bold text-accent">{step.number}</span>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {step.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Format section */}
