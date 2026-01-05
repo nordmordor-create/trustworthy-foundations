@@ -17,12 +17,13 @@ const Hero = () => {
         <div className="max-w-2xl">
           <div className="accent-line mb-8" />
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Строительная Компания Максима Терехичева
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <span className="text-foreground block">Строительная компания</span>
+            <span className="text-accent block">Максима Терехичева</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
-            Частные качественные дома для жизни в 20 минутах от г.Пермь
+          <p className="text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl font-medium">
+            Качественные частные дома от 7 млн руб в 20 минутах езды от г.Пермь
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -30,7 +31,7 @@ const Hero = () => {
               href="#contacts" 
               className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-medium rounded-lg hover:bg-accent/90 transition-colors"
             >
-              Обсудить проект
+              Оставить заявку
             </a>
             <a 
               href="#projects" 

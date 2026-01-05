@@ -1,4 +1,3 @@
-import { CheckCircle } from "lucide-react";
 import stepFoundation from "@/assets/step-foundation.jpg";
 import stepWalls from "@/assets/step-walls.jpg";
 import stepRoof from "@/assets/step-roof.jpg";
@@ -10,25 +9,49 @@ const Approach = () => {
       image: stepFoundation,
       number: "01",
       title: "Фундамент",
-      description: "Проектирование под конкретные условия участка. Ленточный или монолитный фундамент с полной гидроизоляцией."
+      description: "Проектирование под условия участка. Ленточный или монолитный."
     },
     {
       image: stepWalls,
       number: "02",
-      title: "Стены — пеноблок",
-      description: "Надежный материал с отличными теплоизоляционными свойствами. Толщина стен 400 мм для комфортного микроклимата."
+      title: "Стены",
+      description: "Пеноблок 400 мм с отличной теплоизоляцией."
     },
     {
       image: stepRoof,
       number: "03",
       title: "Кровля",
-      description: "Металлочерепица или мягкая кровля. Полная теплоизоляция и вентиляция подкровельного пространства."
+      description: "Металлочерепица или мягкая кровля с утеплением."
     },
     {
       image: stepUtilities,
       number: "04",
       title: "Коммуникации",
-      description: "Электричество 15 кВт, водоснабжение, канализация. Полная разводка по дому под ключ."
+      description: "Электричество, вода, канализация под ключ."
+    },
+    {
+      image: stepFoundation,
+      number: "05",
+      title: "Отделка фасада",
+      description: "Штукатурка, облицовочный кирпич или сайдинг."
+    },
+    {
+      image: stepWalls,
+      number: "06",
+      title: "Окна и двери",
+      description: "Металлопластиковые окна и входные двери."
+    },
+    {
+      image: stepRoof,
+      number: "07",
+      title: "Внутренняя отделка",
+      description: "Черновая или чистовая отделка на выбор."
+    },
+    {
+      image: stepUtilities,
+      number: "08",
+      title: "Благоустройство",
+      description: "Отмостка, дорожки, озеленение участка."
     }
   ];
 
@@ -45,58 +68,32 @@ const Approach = () => {
           </p>
         </div>
 
-        {/* Visual Steps Timeline */}
-        <div className="relative">
-          {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 z-0" />
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div 
-                key={index}
-                className="relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 z-10"
-              >
-                <div className="aspect-square overflow-hidden bg-secondary/30">
-                  <img 
-                    src={step.image} 
-                    alt={step.title}
-                    className="w-full h-full object-contain p-4"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-bold text-accent">{step.number}</span>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {step.title}
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {steps.map((step, index) => (
+            <div 
+              key={index}
+              className="relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
+            >
+              <div className="aspect-square overflow-hidden bg-secondary/30">
+                <img 
+                  src={step.image} 
+                  alt={step.title}
+                  className="w-full h-full object-contain p-3"
+                />
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Format section */}
-        <div className="mt-20 bg-secondary/50 rounded-2xl p-8 md:p-12">
-          <h3 className="text-2xl font-bold text-foreground mb-8">
-            Формат домов
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              "Частные дома от 80 м²",
-              "Участки от 8 соток",
-              "White box — чистая база для жизни",
-              "Возможен ремонт под ключ"
-            ].map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-foreground">{item}</span>
+              <div className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl font-bold text-accent">{step.number}</span>
+                  <h3 className="text-sm md:text-base font-semibold text-foreground">
+                    {step.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

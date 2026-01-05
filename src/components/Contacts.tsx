@@ -8,7 +8,7 @@ const Contacts = () => {
           <div>
             <div className="w-16 h-1 bg-accent rounded-full mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Обсудим ваш проект
+              Оставить заявку
             </h2>
             <p className="text-lg opacity-80 mb-10 leading-relaxed">
               Частное домостроение с инженерным подходом. Свяжитесь с нами для консультации.
