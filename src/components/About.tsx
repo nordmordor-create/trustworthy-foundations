@@ -72,9 +72,6 @@ const About = () => {
               ))}
             </div>
 
-            <p className="text-xl font-medium text-foreground italic mt-8">
-              Проекты меняются. Подход остается.
-            </p>
           </div>
         </div>
       </div>

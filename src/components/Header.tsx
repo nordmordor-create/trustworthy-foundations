@@ -8,11 +8,11 @@ const Header = () => {
         <a href="#" className="flex items-center gap-3">
           <img src={logo} alt="СК Максима Терехичева" className="h-10 md:h-12 w-auto" />
           <div className="flex flex-col">
-            <span className="text-base md:text-lg font-semibold text-foreground tracking-tight">
-              СК Максима Терехичева
+            <span className="text-sm md:text-base font-semibold text-foreground tracking-tight leading-tight">
+              Строительная компания
             </span>
-            <span className="text-xs text-muted-foreground hidden sm:block">
-              Инженерное домостроение
+            <span className="text-sm md:text-base font-semibold text-foreground tracking-tight leading-tight">
+              Максима Терехичева
             </span>
           </div>
         </a>
