@@ -1,21 +1,24 @@
 const Footer = () => {
   return (
-    <footer className="py-8 bg-graphite text-graphite-foreground border-t border-graphite-foreground/10">
+    <footer className="py-10 bg-graphite text-graphite-foreground border-t border-graphite-foreground/10">
       <div className="container-main">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col items-center md:items-start">
-            <span className="font-semibold">СК Максима Терехичева</span>
-            <span className="text-sm opacity-60">Инженерное частное домостроение</span>
+        <div className="text-center space-y-4">
+          <div>
+            <span className="font-semibold text-lg">СК Максима Терехичева</span>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm opacity-60">
-            <a href="#" className="hover:opacity-100 transition-opacity">
+          <div className="text-sm opacity-70">
+            Инженерное частное домостроение
+          </div>
+          
+          <div className="text-sm opacity-60">
+            ИП Терехичев М.А. | ИНН 590123456789 | ОГРНИП 123456789012345
+          </div>
+          
+          <div>
+            <a href="#" className="text-sm opacity-60 hover:opacity-100 transition-opacity underline">
               Политика обработки персональных данных
             </a>
-            <span className="hidden md:inline">|</span>
-            <span>ИП Терехичев М.А.</span>
-            <span className="hidden md:inline">|</span>
-            <span>ИНН 590123456789</span>
           </div>
           
           <div className="text-sm opacity-60">

@@ -1,27 +1,4 @@
-import { Play } from "lucide-react";
-import videoThumb1 from "@/assets/video-thumb-1.jpg";
-import videoThumb2 from "@/assets/video-thumb-2.jpg";
-import videoThumb3 from "@/assets/video-thumb-3.jpg";
-
 const SocialMedia = () => {
-  const videos = [
-    {
-      image: videoThumb1,
-      title: "Строительство дома 120 м² — полный обзор",
-      views: "15K просмотров"
-    },
-    {
-      image: videoThumb2,
-      title: "Внутренняя отделка: этапы и материалы",
-      views: "8K просмотров"
-    },
-    {
-      image: videoThumb3,
-      title: "Обзор готового дома в Болдино",
-      views: "22K просмотров"
-    }
-  ];
-
   const channels = [
     {
       name: "ВКонтакте",
@@ -58,46 +35,6 @@ const SocialMedia = () => {
   return (
     <section className="section-spacing">
       <div className="container-main">
-        <div className="text-center mb-12">
-          <div className="accent-line mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Следите за нами
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Подпишитесь на наши каналы, чтобы видеть процесс строительства и готовые проекты
-          </p>
-        </div>
-
-        {/* Video examples */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {videos.map((video, index) => (
-            <a 
-              key={index}
-              href="#"
-              className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <img 
-                  src={video.image} 
-                  alt={video.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-background/30 flex items-center justify-center group-hover:bg-background/20 transition-colors">
-                  <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center">
-                    <Play className="w-8 h-8 text-accent-foreground ml-1" fill="currentColor" />
-                  </div>
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-foreground mb-1 line-clamp-2">
-                  {video.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">{video.views}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-
         {/* Social channels */}
         <div className="bg-graphite text-graphite-foreground rounded-2xl p-8 md:p-12">
           <div className="text-center mb-8">

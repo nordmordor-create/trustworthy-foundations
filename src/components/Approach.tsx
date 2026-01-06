@@ -2,6 +2,10 @@ import stepFoundation from "@/assets/step-foundation.jpg";
 import stepWalls from "@/assets/step-walls.jpg";
 import stepRoof from "@/assets/step-roof.jpg";
 import stepUtilities from "@/assets/step-utilities.jpg";
+import stepFacade from "@/assets/step-facade.jpg";
+import stepWindows from "@/assets/step-windows.jpg";
+import stepFinishing from "@/assets/step-finishing.jpg";
+import stepLandscaping from "@/assets/step-landscaping.jpg";
 
 const Approach = () => {
   const steps = [
@@ -9,49 +13,49 @@ const Approach = () => {
       image: stepFoundation,
       number: "01",
       title: "Фундамент",
-      description: "Проектирование под условия участка. Ленточный или монолитный."
+      description: "Утепленная монолитная шведская плита в соответствии с геологией участка."
     },
     {
       image: stepWalls,
       number: "02",
       title: "Стены",
-      description: "Пеноблок 400 мм с отличной теплоизоляцией."
+      description: "Сертифицированный газоблок 400 мм, с облицовкой вентиляционным фасадом."
     },
     {
       image: stepRoof,
       number: "03",
       title: "Кровля",
-      description: "Металлочерепица или мягкая кровля с утеплением."
+      description: "Скатная кровля Кликфальц из металлочерепицы, плоская ПВХ мембрана."
     },
     {
       image: stepUtilities,
       number: "04",
-      title: "Коммуникации",
-      description: "Электричество, вода, канализация под ключ."
+      title: "Инженерия",
+      description: "Слаботочные сети и электрика, водоснабжение и водоотведение, вентиляция."
     },
     {
-      image: stepFoundation,
+      image: stepFacade,
       number: "05",
-      title: "Отделка фасада",
-      description: "Штукатурка, облицовочный кирпич или сайдинг."
+      title: "Фасад",
+      description: "Вентилируемый, с облицовкой окрашенным планкеном в заводских условиях."
     },
     {
-      image: stepWalls,
+      image: stepWindows,
       number: "06",
-      title: "Окна и двери",
-      description: "Металлопластиковые окна и входные двери."
+      title: "Окна",
+      description: "ExproF, KBE, Rehau (70 мм). Двухкамерные с низкоэмиссионным стеклом."
     },
     {
-      image: stepRoof,
+      image: stepFinishing,
       number: "07",
-      title: "Внутренняя отделка",
-      description: "Черновая или чистовая отделка на выбор."
+      title: "Отделка",
+      description: "Все возможные виды: от теплого контура до полностью готового интерьера."
     },
     {
-      image: stepUtilities,
+      image: stepLandscaping,
       number: "08",
       title: "Благоустройство",
-      description: "Отмостка, дорожки, озеленение участка."
+      description: "Строительство заборов, устройство дорожек и парковочных зон, озеленение участка."
     }
   ];
 
@@ -74,11 +78,11 @@ const Approach = () => {
               key={index}
               className="relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden bg-secondary/30">
+              <div className="aspect-square overflow-hidden">
                 <img 
                   src={step.image} 
                   alt={step.title}
-                  className="w-full h-full object-contain p-3"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-4">
