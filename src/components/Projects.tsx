@@ -1,53 +1,39 @@
-import house80 from "@/assets/house-80.jpg";
-import house100 from "@/assets/house-100.jpg";
-import house120 from "@/assets/house-120.jpg";
-import house80Interior from "@/assets/house-80-interior.jpg";
-import house100Interior from "@/assets/house-100-interior.jpg";
-import house120Interior from "@/assets/house-120-interior.jpg";
+import house85 from "@/assets/house-85.jpg";
 import villageBoldino from "@/assets/village-boldino.jpg";
 import villageKrp from "@/assets/village-krp.jpg";
-import { ArrowRight, ExternalLink, Ruler, Home, Thermometer, Zap } from "lucide-react";
+import { ExternalLink, Home, Zap, Flame } from "lucide-react";
 
 const Projects = () => {
   const houses = [
     {
-      images: [house80, house80Interior],
-      area: "80 м²",
-      price: "от 7 млн ₽",
-      description: "Компактный дом для семьи",
-      specs: {
-        rooms: "3 комнаты",
-        floors: "1 этаж",
-        heating: "Газовое",
-        electricity: "15 кВт"
-      },
-      avitoLink: null
+      image: house85,
+      area: "85 м²",
+      village: "Поселок КРП",
+      price: "от 6.5 млн руб",
+      description: "Идеальная альтернатива квартире",
+      landIncluded: true,
+      specs: "3 спальни, 1 этаж, 15 кВт, Газ (скоро)",
+      avitoLink: "#"
     },
     {
-      images: [house100, house100Interior],
+      image: house85,
+      area: "85 м²",
+      village: "Поселок Болдино Life",
+      price: "от 7 млн руб",
+      description: "Идеальная альтернатива квартире",
+      landIncluded: true,
+      specs: "3 спальни, 1 этаж, 15 кВт, Газ (скоро)",
+      avitoLink: "#"
+    },
+    {
+      image: house85,
       area: "100 м²",
-      price: "от 8,5 млн ₽",
-      description: "Просторный семейный дом",
-      specs: {
-        rooms: "4 комнаты",
-        floors: "2 этажа",
-        heating: "Газовое",
-        electricity: "15 кВт"
-      },
-      avitoLink: "https://avito.ru"
-    },
-    {
-      images: [house120, house120Interior],
-      area: "120 м²",
-      price: "от 10 млн ₽",
-      description: "Премиальный проект с панорамными окнами",
-      specs: {
-        rooms: "5 комнат",
-        floors: "2 этажа",
-        heating: "Газовое",
-        electricity: "15 кВт"
-      },
-      avitoLink: "https://avito.ru"
+      village: "Поселок Болдино Life",
+      price: "от 9 млн руб",
+      description: "Идеальная альтернатива квартире",
+      landIncluded: true,
+      specs: "4 спальни, 1 этаж, 15 кВт, Газ (скоро)",
+      avitoLink: "#"
     }
   ];
 
@@ -57,14 +43,16 @@ const Projects = () => {
       image: villageBoldino,
       description: "Современный коттеджный поселок в 20 минутах от Перми. Развитая инфраструктура, асфальтированные дороги, центральные коммуникации. Идеально для семей, ценящих комфорт и природу.",
       features: ["Газификация", "Центральное водоснабжение", "Асфальтированные дороги", "Детская площадка"],
-      status: "Актуально"
+      status: "20 минут от Перми",
+      websiteUrl: "#"
     },
     {
       name: "КРП",
       image: villageKrp,
       description: "Перспективный проект с продуманной планировкой территории. Участки от 8 соток, все коммуникации подведены. Удобный выезд на федеральную трассу.",
       features: ["Электричество 15 кВт", "Скважина", "Асфальт до участка", "Охраняемая территория"],
-      status: "Актуально"
+      status: "20 минут от Перми",
+      websiteUrl: "#"
     }
   ];
 
@@ -74,80 +62,77 @@ const Projects = () => {
         <div className="text-center mb-16">
           <div className="accent-line mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Примеры домов
+            Дома в продаже
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Свободная планировка. Индивидуальный подход к каждому проекту.
+            Готовые проекты домов с участками в наших поселках
           </p>
         </div>
 
         {/* House cards */}
-        <div className="space-y-12 mb-20">
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
           {houses.map((house, index) => (
             <div 
               key={index}
               className="bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
             >
-              <div className="grid lg:grid-cols-2 gap-0">
-                {/* Images */}
-                <div className="grid grid-cols-2 gap-2 p-2">
-                  {house.images.map((img, imgIndex) => (
-                    <div key={imgIndex} className="aspect-[4/3] overflow-hidden rounded-lg">
-                      <img 
-                        src={img} 
-                        alt={`Дом ${house.area} - фото ${imgIndex + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                  ))}
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src={house.image} 
+                  alt={`Дом ${house.area}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              
+              <div className="p-5">
+                <div className="flex items-baseline justify-between mb-2">
+                  <h3 className="text-xl font-bold text-foreground">
+                    Дом {house.area}
+                  </h3>
                 </div>
                 
-                {/* Info */}
-                <div className="p-6 lg:p-8 flex flex-col justify-center">
-                  <div className="flex items-baseline justify-between mb-4">
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                      Дом {house.area}
-                    </h3>
-                    <span className="text-xl font-semibold text-accent">
-                      {house.price}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground mb-6">
-                    {house.description}
-                  </p>
-                  
-                  {/* Specs */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="flex items-center gap-2 text-sm">
-                      <Home className="w-4 h-4 text-accent" />
-                      <span className="text-foreground">{house.specs.rooms}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Ruler className="w-4 h-4 text-accent" />
-                      <span className="text-foreground">{house.specs.floors}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Thermometer className="w-4 h-4 text-accent" />
-                      <span className="text-foreground">{house.specs.heating}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Zap className="w-4 h-4 text-accent" />
-                      <span className="text-foreground">{house.specs.electricity}</span>
-                    </div>
-                  </div>
-                  
-                  {house.avitoLink && (
-                    <a 
-                      href={house.avitoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Смотреть на Авито
-                    </a>
-                  )}
+                <p className="text-sm text-muted-foreground mb-2">
+                  {house.village}
+                </p>
+                
+                <div className="text-xl font-semibold text-accent mb-3">
+                  {house.price}
                 </div>
+                
+                {house.landIncluded && (
+                  <div className="inline-block text-xs bg-accent/10 text-accent px-2 py-1 rounded mb-3">
+                    Участок входит в цену
+                  </div>
+                )}
+                
+                <p className="text-sm text-muted-foreground mb-4">
+                  {house.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 text-xs text-foreground mb-4">
+                  <div className="flex items-center gap-1 bg-secondary/50 px-2 py-1 rounded">
+                    <Home className="w-3 h-3 text-accent" />
+                    <span>{house.specs.split(',')[0]}</span>
+                  </div>
+                  <div className="flex items-center gap-1 bg-secondary/50 px-2 py-1 rounded">
+                    <Zap className="w-3 h-3 text-accent" />
+                    <span>15 кВт</span>
+                  </div>
+                  <div className="flex items-center gap-1 bg-secondary/50 px-2 py-1 rounded">
+                    <Flame className="w-3 h-3 text-accent" />
+                    <span>Газ (скоро)</span>
+                  </div>
+                </div>
+                
+                <a 
+                  href={house.avitoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium text-sm"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Смотреть на Авито
+                </a>
               </div>
             </div>
           ))}
@@ -156,7 +141,7 @@ const Projects = () => {
         {/* Villages */}
         <div>
           <h3 className="text-2xl font-bold text-foreground mb-8">
-            Проекты поселков
+            Информация о поселках
           </h3>
           <div className="space-y-8">
             {villages.map((village, index) => (
@@ -184,7 +169,7 @@ const Projects = () => {
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {village.description}
                     </p>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-3 mb-6">
                       {village.features.map((feature, fIndex) => (
                         <div key={fIndex} className="flex items-center gap-2 text-sm">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -192,6 +177,15 @@ const Projects = () => {
                         </div>
                       ))}
                     </div>
+                    <a 
+                      href={village.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Официальный сайт
+                    </a>
                   </div>
                 </div>
               </div>
