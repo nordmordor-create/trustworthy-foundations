@@ -1,38 +1,61 @@
-import house85 from "@/assets/house-85.jpg";
+import house80 from "@/assets/house-80.jpg";
+import house100 from "@/assets/house-100.jpg";
+import house120 from "@/assets/house-120.jpg";
 import villageBoldino from "@/assets/village-boldino.jpg";
 import villageKrp from "@/assets/village-krp.jpg";
-import { ExternalLink, Home, Zap, Flame } from "lucide-react";
+import { ExternalLink, Bed, Bath, Zap, Droplets, CircleDot, Flame } from "lucide-react";
 
 const Projects = () => {
   const houses = [
     {
-      image: house85,
+      image: house80,
       area: "85 м²",
       village: "Поселок КРП",
       price: "от 6.5 млн руб",
       description: "Идеальная альтернатива квартире",
       landIncluded: true,
-      specs: "3 спальни, 1 этаж, 15 кВт, Газ (скоро)",
+      specs: [
+        { icon: Bed, text: "3 спальни" },
+        { icon: Bath, text: "1 санузел" },
+        { icon: Zap, text: "15 кВт" },
+        { icon: Droplets, text: "Скважина" },
+        { icon: CircleDot, text: "Септик" },
+        { icon: Flame, text: "Газ (скоро)" }
+      ],
       avitoLink: "#"
     },
     {
-      image: house85,
+      image: house100,
       area: "85 м²",
       village: "Поселок Болдино Life",
       price: "от 7 млн руб",
       description: "Идеальная альтернатива квартире",
       landIncluded: true,
-      specs: "3 спальни, 1 этаж, 15 кВт, Газ (скоро)",
+      specs: [
+        { icon: Bed, text: "3 спальни" },
+        { icon: Bath, text: "1 санузел" },
+        { icon: Zap, text: "15 кВт" },
+        { icon: Droplets, text: "Скважина" },
+        { icon: CircleDot, text: "Септик" },
+        { icon: Flame, text: "Газ (скоро)" }
+      ],
       avitoLink: "#"
     },
     {
-      image: house85,
+      image: house120,
       area: "100 м²",
       village: "Поселок Болдино Life",
       price: "от 9 млн руб",
       description: "Идеальная альтернатива квартире",
       landIncluded: true,
-      specs: "4 спальни, 1 этаж, 15 кВт, Газ (скоро)",
+      specs: [
+        { icon: Bed, text: "3 спальни" },
+        { icon: Bath, text: "2 санузла" },
+        { icon: Zap, text: "15 кВт" },
+        { icon: Droplets, text: "Скважина" },
+        { icon: CircleDot, text: "Септик" },
+        { icon: Flame, text: "Газ (скоро)" }
+      ],
       avitoLink: "#"
     }
   ];
@@ -109,19 +132,13 @@ const Projects = () => {
                   {house.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 text-xs text-foreground mb-4">
-                  <div className="flex items-center gap-1 bg-secondary/50 px-2 py-1 rounded">
-                    <Home className="w-3 h-3 text-accent" />
-                    <span>{house.specs.split(',')[0]}</span>
-                  </div>
-                  <div className="flex items-center gap-1 bg-secondary/50 px-2 py-1 rounded">
-                    <Zap className="w-3 h-3 text-accent" />
-                    <span>15 кВт</span>
-                  </div>
-                  <div className="flex items-center gap-1 bg-secondary/50 px-2 py-1 rounded">
-                    <Flame className="w-3 h-3 text-accent" />
-                    <span>Газ (скоро)</span>
-                  </div>
+                <div className="grid grid-cols-2 gap-2 text-xs text-foreground mb-4">
+                  {house.specs.map((spec, specIndex) => (
+                    <div key={specIndex} className="flex items-center gap-1 bg-secondary/50 px-2 py-1.5 rounded">
+                      <spec.icon className="w-3 h-3 text-accent" />
+                      <span>{spec.text}</span>
+                    </div>
+                  ))}
                 </div>
                 
                 <a 

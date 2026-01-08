@@ -33,7 +33,7 @@ const SocialMedia = () => {
   ];
 
   return (
-    <section className="section-spacing">
+    <section className="py-8 md:py-12">
       <div className="container-main">
         {/* Social channels */}
         <div className="bg-graphite text-graphite-foreground rounded-2xl p-8 md:p-12">
