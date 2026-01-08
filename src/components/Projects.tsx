@@ -3,7 +3,7 @@ import house100 from "@/assets/house-100.jpg";
 import house120 from "@/assets/house-120.jpg";
 import villageBoldino from "@/assets/village-boldino.jpg";
 import villageKrp from "@/assets/village-krp.jpg";
-import { ExternalLink, Bed, Bath, Zap, Droplets, CircleDot, Flame } from "lucide-react";
+import { ExternalLink, Bed, Bath, Zap, Flame } from "lucide-react";
 
 const Projects = () => {
   const houses = [
@@ -18,8 +18,6 @@ const Projects = () => {
         { icon: Bed, text: "3 спальни" },
         { icon: Bath, text: "1 санузел" },
         { icon: Zap, text: "15 кВт" },
-        { icon: Droplets, text: "Скважина" },
-        { icon: CircleDot, text: "Септик" },
         { icon: Flame, text: "Газ (скоро)" }
       ],
       avitoLink: "#"
@@ -35,8 +33,6 @@ const Projects = () => {
         { icon: Bed, text: "3 спальни" },
         { icon: Bath, text: "1 санузел" },
         { icon: Zap, text: "15 кВт" },
-        { icon: Droplets, text: "Скважина" },
-        { icon: CircleDot, text: "Септик" },
         { icon: Flame, text: "Газ (скоро)" }
       ],
       avitoLink: "#"
@@ -52,8 +48,6 @@ const Projects = () => {
         { icon: Bed, text: "3 спальни" },
         { icon: Bath, text: "2 санузла" },
         { icon: Zap, text: "15 кВт" },
-        { icon: Droplets, text: "Скважина" },
-        { icon: CircleDot, text: "Септик" },
         { icon: Flame, text: "Газ (скоро)" }
       ],
       avitoLink: "#"
