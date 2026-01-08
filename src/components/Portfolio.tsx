@@ -1,23 +1,41 @@
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
 
 const Portfolio = () => {
   const projects = [
     {
       image: portfolio1,
-      title: "Дом в Болдино Life",
-      description: "Двухэтажный дом 150 м² с панорамным остеклением и террасой. Отделка под ключ, благоустройство участка. Срок строительства — 8 месяцев."
+      title: "Частный клубный дом с кинотеатром",
+      description: "Премиальный проект частного кинозала с эргономичными креслами и профессиональным звуковым оборудованием. Реализована система затемнения и акустическая изоляция. Интерьер выполнен в современном минималистичном стиле с использованием тёмных тонов."
     },
     {
       image: portfolio2,
-      title: "Семейный дом в КРП",
-      description: "Просторный дом 120 м² с деревянным фасадом и большой верандой. Газовое отопление, ландшафтный дизайн. Сдан в 2024 году."
+      title: "Гостевой дом в НОЦ «Энергетик»",
+      description: "Гостевая спальня с панорамным остеклением и видом на сосновый лес. Использованы натуральные материалы: дерево, камень, текстиль. Продуманное освещение создаёт атмосферу уюта. Минималистичный дизайн подчёркивает связь с природой."
     },
     {
       image: portfolio3,
-      title: "Современный барнхаус",
-      description: "Дом в стиле барнхаус 180 м² с темным фасадом и вторым светом. Панорамные окна, теплые полы, умный дом. Премиальная отделка."
+      title: "Дом отдыха Свердловского района",
+      description: "Многофункциональное пространство для отдыха и работы с панорамными окнами. Интерьер сочетает деловую зону и зону релаксации. Большие окна обеспечивают естественное освещение и вид на зелёную территорию. Мебель подобрана для максимального комфорта."
+    },
+    {
+      image: portfolio4,
+      title: "Апартаменты в МФК «Москва»",
+      description: "Решение «под ключ» для премиальных апартаментов с авторским дизайном. Кухня-гостиная оснащена встроенной техникой премиум-класса. Использованы эксклюзивные материалы: натуральный камень, ценные породы дерева. Функциональное зонирование и уникальные дизайнерские решения."
+    },
+    {
+      image: portfolio5,
+      title: "Гостевой дом в д. Нижнее Задолгое",
+      description: "Современный барнхаус с панорамным остеклением в окружении леса. Тёмный фасад из окрашенного планкена гармонирует с природным ландшафтом. Открытая терраса для отдыха на свежем воздухе. Энергоэффективные технологии обеспечивают комфорт круглый год."
+    },
+    {
+      image: portfolio6,
+      title: "Перепланировка квартиры в Перми",
+      description: "Полная перепланировка и дизайн интерьера городской квартиры. Объединённое пространство кухни-гостиной с современной мебелью. Светлая цветовая гамма визуально расширяет пространство. Использованы качественные отделочные материалы и продуманное освещение."
     }
   ];
 
@@ -30,17 +48,17 @@ const Portfolio = () => {
             Наши проекты
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Примеры реализованных домов нашей компанией
+            Примеры реализованных проектов нашей компанией
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div 
               key={index}
               className="bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="aspect-[3/2] overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -51,7 +69,7 @@ const Portfolio = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {project.description}
                 </p>
               </div>
