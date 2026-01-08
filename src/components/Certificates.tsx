@@ -9,30 +9,14 @@ const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const documents = [
-    {
-      image: certificate1,
-      title: "Сертификат ISO 9001:2015",
-      type: "Сертификат"
-    },
-    {
-      image: license1,
-      title: "Лицензия СРО",
-      type: "Лицензия"
-    },
-    {
-      image: thanks1,
-      title: "Благодарность от семьи Ивановых",
-      type: "Благодарность"
-    },
-    {
-      image: thanks2,
-      title: "Благодарственное письмо",
-      type: "Благодарность"
-    }
+    { image: certificate1, title: "Сертификат ISO 9001:2015" },
+    { image: license1, title: "Лицензия СРО" },
+    { image: thanks1, title: "Благодарность от семьи Ивановых" },
+    { image: thanks2, title: "Благодарственное письмо" }
   ];
 
   return (
-    <section className="section-spacing bg-secondary/30">
+    <section className="py-12 md:py-16 bg-secondary/30">
       <div className="container-main">
         <div className="text-center mb-12">
           <div className="accent-line mx-auto mb-6" />
@@ -59,8 +43,7 @@ const Certificates = () => {
                 />
               </div>
               <div className="p-3">
-                <div className="text-xs text-accent font-medium mb-1">{doc.type}</div>
-                <div className="text-sm text-foreground font-medium line-clamp-2">{doc.title}</div>
+                <div className="text-sm text-foreground font-medium text-center">{doc.title}</div>
               </div>
             </div>
           ))}
