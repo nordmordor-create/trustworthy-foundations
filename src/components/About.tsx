@@ -38,9 +38,9 @@ const About = () => {
               alt="Максим Терехичев — основатель компании" 
               className="w-full max-w-md mx-auto rounded-xl shadow-lg"
             />
-            <div className="mt-4 lg:mt-0 lg:absolute lg:-bottom-4 lg:-right-4 bg-graphite text-graphite-foreground p-4 rounded-lg text-center lg:text-left">
-              <div className="text-lg font-bold">Максим Терехичев</div>
-              <div className="text-sm opacity-80">Основатель компании</div>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:-bottom-4 lg:-right-4 bg-graphite text-graphite-foreground p-3 lg:p-4 rounded-lg text-center lg:text-left">
+              <div className="text-base lg:text-lg font-bold">Максим Терехичев</div>
+              <div className="text-xs lg:text-sm opacity-80">Основатель компании</div>
             </div>
           </div>
 
