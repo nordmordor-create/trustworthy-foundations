@@ -85,14 +85,14 @@ const Approach = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl font-bold text-accent">{step.number}</span>
-                  <h3 className="text-sm md:text-base font-semibold text-foreground">
-                    {step.title}
-                  </h3>
+              <div className="p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl font-bold text-accent">{step.number}</span>
                 </div>
-                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
+                <h3 className="font-semibold text-foreground mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>
