@@ -5,7 +5,6 @@ import Approach from "@/components/Approach";
 import Projects from "@/components/Projects";
 import FinishingOptions from "@/components/FinishingOptions";
 import Portfolio from "@/components/Portfolio";
-import Certificates from "@/components/Certificates";
 import SocialMedia from "@/components/SocialMedia";
 import Contacts from "@/components/Contacts";
 import Footer from "@/components/Footer";
@@ -21,7 +20,6 @@ const Index = () => {
         <Approach />
         <FinishingOptions />
         <Portfolio />
-        <Certificates />
         <SocialMedia />
         <Contacts />
       </main>

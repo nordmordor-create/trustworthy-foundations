@@ -2,7 +2,7 @@ import heroImage from "@/assets/hero-house.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
+    <section className="relative h-screen flex items-center">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
