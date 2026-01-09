@@ -17,9 +17,9 @@ const Hero = () => {
         <div className="max-w-2xl">
           <div className="accent-line mb-8" />
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-foreground block">Строительная компания</span>
-            <span className="text-accent block">Максима Терехичева</span>
+          <h1 className="font-bold mb-6 leading-tight">
+            <span className="text-foreground block whitespace-nowrap text-[clamp(1.5rem,5vw,3.75rem)]">Строительная компания</span>
+            <span className="text-accent block text-[clamp(1.5rem,5vw,3.75rem)]">Максима Терехичева</span>
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl font-medium">
