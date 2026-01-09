@@ -32,20 +32,20 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Founder photo */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative">
             <img 
               src={founderImage} 
               alt="Максим Терехичев — основатель компании" 
               className="w-full max-w-md mx-auto rounded-xl shadow-lg"
             />
-            <div className="absolute -bottom-4 -right-4 bg-graphite text-graphite-foreground p-4 rounded-lg hidden md:block">
+            <div className="mt-4 lg:mt-0 lg:absolute lg:-bottom-4 lg:-right-4 bg-graphite text-graphite-foreground p-4 rounded-lg text-center lg:text-left">
               <div className="text-lg font-bold">Максим Терехичев</div>
               <div className="text-sm opacity-80">Основатель компании</div>
             </div>
           </div>
 
           {/* Principles */}
-          <div className="order-1 lg:order-2">
+          <div>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Строительная компания Максима Терехичева — это системный подход к частному жилью.
               Мы создаем проекты, объединенные едиными принципами.

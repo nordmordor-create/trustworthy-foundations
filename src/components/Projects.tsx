@@ -106,15 +106,14 @@ const Projects = () => {
                   <h3 className="text-xl font-bold text-foreground">
                     Дом {house.area}
                   </h3>
+                  <div className="text-xl font-semibold text-accent">
+                    {house.price}
+                  </div>
                 </div>
                 
                 <p className="text-sm text-muted-foreground mb-2">
                   {house.village}
                 </p>
-                
-                <div className="text-xl font-semibold text-accent mb-3">
-                  {house.price}
-                </div>
                 
                 {house.landIncluded && (
                   <div className="inline-block text-xs bg-accent/10 text-accent px-2 py-1 rounded mb-3">
@@ -160,30 +159,30 @@ const Projects = () => {
                 key={index}
                 className="bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
               >
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="aspect-[16/10] lg:aspect-auto overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="aspect-[16/10] md:aspect-auto overflow-hidden">
                     <img 
                       src={village.image} 
                       alt={village.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-6 lg:p-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <h4 className="text-2xl font-semibold text-foreground">
+                  <div className="p-5 md:p-6 lg:p-8">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                      <h4 className="text-xl md:text-2xl font-semibold text-foreground">
                         {village.name}
                       </h4>
-                      <span className="text-sm bg-accent/10 text-accent px-3 py-1 rounded-full">
+                      <span className="text-xs md:text-sm bg-accent/10 text-accent px-3 py-1 rounded-full w-fit">
                         {village.status}
                       </span>
                     </div>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 leading-relaxed">
                       {village.description}
                     </p>
-                    <div className="grid grid-cols-2 gap-3 mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6">
                       {village.features.map((feature, fIndex) => (
-                        <div key={fIndex} className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div key={fIndex} className="flex items-center gap-2 text-xs md:text-sm">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
                           <span className="text-foreground">{feature}</span>
                         </div>
                       ))}
@@ -192,7 +191,7 @@ const Projects = () => {
                       href={village.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium text-sm md:text-base"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Официальный сайт
