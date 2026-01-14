@@ -11,7 +11,7 @@ const Projects = () => {
       image: house80,
       area: "85 м²",
       village: "Поселок КРП",
-      price: "от 6.5 млн руб",
+      price: "от 6 млн руб",
       description: "Идеальная альтернатива квартире",
       landIncluded: true,
       specs: [
