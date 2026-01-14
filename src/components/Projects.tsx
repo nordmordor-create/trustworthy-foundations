@@ -9,15 +9,15 @@ const Projects = () => {
     image: house80,
     area: "85 м²",
     village: "Поселок КРП",
-    price: "от 6.5 млн руб",
+    price: "от 6 млн руб",
     description: "Идеальная альтернатива квартире",
     landIncluded: true,
     specs: [{
       icon: Bed,
-      text: "3 спальни"
+      text: "2 или 3 спальни"
     }, {
       icon: Bath,
-      text: "1 санузел"
+      text: "2 санузла"
     }, {
       icon: Zap,
       text: "15 кВт"
@@ -30,15 +30,15 @@ const Projects = () => {
     image: house100,
     area: "85 м²",
     village: "Поселок Болдино Life",
-    price: "от 7 млн руб",
+    price: "от 6 млн руб",
     description: "Идеальная альтернатива квартире",
     landIncluded: true,
     specs: [{
       icon: Bed,
-      text: "3 спальни"
+      text: "2 или 3 спальни"
     }, {
       icon: Bath,
-      text: "1 санузел"
+      text: "2 санузла"
     }, {
       icon: Zap,
       text: "15 кВт"
@@ -51,12 +51,12 @@ const Projects = () => {
     image: house120,
     area: "100 м²",
     village: "Поселок Болдино Life",
-    price: "от 9 млн руб",
+    price: "от 8 млн руб",
     description: "Идеальная альтернатива квартире",
     landIncluded: true,
     specs: [{
       icon: Bed,
-      text: "3 спальни"
+      text: "2 или 3 спальни"
     }, {
       icon: Bath,
       text: "2 санузла"

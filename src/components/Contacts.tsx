@@ -16,13 +16,13 @@ const Contacts = () => {
 
             <div className="space-y-6">
               <a 
-                href="tel:+79991234567"
+                href="tel:+79194406079"
                 className="flex items-center gap-4 text-lg hover:text-accent transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span>+7 (999) 123-45-67</span>
+                <span>+7 (919) 440-60-79</span>
               </a>
               
               <a 
@@ -39,7 +39,7 @@ const Contacts = () => {
                 <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span>Пермь и Пермский край</span>
+                <span>г.Пермь, ул.Монастырская, д.12, оф. 205</span>
               </div>
             </div>
           </div>
