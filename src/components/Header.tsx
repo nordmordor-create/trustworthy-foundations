@@ -1,9 +1,7 @@
 import { Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 const Header = () => {
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container-main flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center gap-3">
           <img src={logo} alt="СК Максима Терехичева" className="h-10 md:h-12 w-auto" />
@@ -32,16 +30,11 @@ const Header = () => {
           </a>
         </nav>
 
-        <a 
-          href="tel:+79991234567" 
-          className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
-        >
+        <a href="tel:+79991234567" className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors">
           <Phone className="w-4 h-4" />
-          <span className="hidden sm:inline">+7 (999) 123-45-67</span>
+          <span className="hidden sm:inline">+7 (919) 440-60-79</span>
         </a>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
