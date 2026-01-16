@@ -25,6 +25,12 @@ const Projects = () => {
       icon: Flame,
       text: "Газ (скоро)"
     }],
+    priceOptions: [
+      { name: "Теплый контур", price: "6 млн руб." },
+      { name: "White Box", price: "7.1 млн руб." },
+      { name: 'Отделка "Комфорт"', price: "8.3 млн руб." },
+      { name: "С мебелью", price: "9.3 млн руб." }
+    ],
     avitoLink: "#"
   }, {
     image: house100,
@@ -46,6 +52,12 @@ const Projects = () => {
       icon: Flame,
       text: "Газ (скоро)"
     }],
+    priceOptions: [
+      { name: "Теплый контур", price: "6 млн руб." },
+      { name: "White Box", price: "7.1 млн руб." },
+      { name: 'Отделка "Комфорт"', price: "8.3 млн руб." },
+      { name: "С мебелью", price: "9.3 млн руб." }
+    ],
     avitoLink: "#"
   }, {
     image: house120,
@@ -67,6 +79,12 @@ const Projects = () => {
       icon: Flame,
       text: "Газ (скоро)"
     }],
+    priceOptions: [
+      { name: "Теплый контур", price: "6 млн руб." },
+      { name: "White Box", price: "7.1 млн руб." },
+      { name: 'Отделка "Комфорт"', price: "8.3 млн руб." },
+      { name: "С мебелью", price: "9.3 млн руб." }
+    ],
     avitoLink: "#"
   }];
   const villages = [{
@@ -131,6 +149,20 @@ const Projects = () => {
                       <span className="">{spec.text}</span>
                     </div>)}
                 </div>
+
+                {house.priceOptions && (
+                  <div className="mb-4 p-3 bg-secondary/30 rounded-lg">
+                    <div className="text-xs font-medium text-foreground mb-2">Варианты комплектации:</div>
+                    <div className="space-y-1">
+                      {house.priceOptions.map((option, optIndex) => (
+                        <div key={optIndex} className="flex justify-between text-xs">
+                          <span className="text-muted-foreground">{option.name}</span>
+                          <span className="text-foreground font-medium">{option.price}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 
                 <a href={house.avitoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium text-sm">
                   <ExternalLink className="w-4 h-4" />

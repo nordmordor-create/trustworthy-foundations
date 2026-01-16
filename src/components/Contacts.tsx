@@ -1,6 +1,25 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const Contacts = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (formData.name.trim() && formData.phone.trim()) {
+      setIsDialogOpen(true);
+      setFormData({ name: "", phone: "", message: "" });
+    }
+  };
+
   return (
     <section id="contacts" className="section-spacing bg-graphite text-graphite-foreground">
       <div className="container-main">
@@ -26,13 +45,13 @@ const Contacts = () => {
               </a>
               
               <a 
-                href="mailto:info@sk-terekhichev.ru"
+                href="mailto:mail@mtereh.ru"
                 className="flex items-center gap-4 text-lg hover:text-accent transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span>info@sk-terekhichev.ru</span>
+                <span>mail@mtereh.ru</span>
               </a>
               
               <div className="flex items-center gap-4 text-lg opacity-80">
@@ -48,11 +67,14 @@ const Contacts = () => {
             <h3 className="text-xl font-semibold mb-6">
               Оставить заявку
             </h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <input 
                   type="text"
                   placeholder="Ваше имя"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
                   className="w-full px-4 py-3 bg-background/10 border border-graphite-foreground/20 rounded-lg text-graphite-foreground placeholder:text-graphite-foreground/50 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
@@ -60,6 +82,9 @@ const Contacts = () => {
                 <input 
                   type="tel"
                   placeholder="Телефон"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
                   className="w-full px-4 py-3 bg-background/10 border border-graphite-foreground/20 rounded-lg text-graphite-foreground placeholder:text-graphite-foreground/50 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
@@ -67,6 +92,8 @@ const Contacts = () => {
                 <textarea 
                   placeholder="Расскажите о вашем проекте"
                   rows={4}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 bg-background/10 border border-graphite-foreground/20 rounded-lg text-graphite-foreground placeholder:text-graphite-foreground/50 focus:outline-none focus:border-accent transition-colors resize-none"
                 />
               </div>
@@ -80,6 +107,17 @@ const Contacts = () => {
           </div>
         </div>
       </div>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl">Спасибо!</DialogTitle>
+            <DialogDescription className="text-center text-base">
+              Ваша заявка успешно отправлена!
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
