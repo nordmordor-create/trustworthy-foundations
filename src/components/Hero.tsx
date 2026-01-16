@@ -23,7 +23,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl font-medium">
-            Качественные частные дома от 7 млн руб в 20 минутах езды от г.Пермь
+            Качественные частные дома от 5 млн руб в 20 минутах езды от г.Пермь
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
