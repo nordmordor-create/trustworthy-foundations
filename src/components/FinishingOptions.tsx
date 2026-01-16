@@ -8,8 +8,8 @@ const FinishingOptions = () => {
     {
       image: finishShell,
       number: "01",
-      title: "Теплый контур без перегородок",
-      description: "Полная свобода для творчества."
+      title: "Теплый контур",
+      description: "Без перегородок, полная свобода для творчества."
     },
     {
       image: finishWhitebox,
@@ -20,7 +20,7 @@ const FinishingOptions = () => {
     {
       image: finishComfort,
       number: "03",
-      title: "Отделка класса комфорт",
+      title: "Отделка Комфорт",
       description: "Для экономии времени, финансов и нервов."
     },
     {

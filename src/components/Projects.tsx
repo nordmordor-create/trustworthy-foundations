@@ -8,7 +8,7 @@ const Projects = () => {
   const houses = [{
     image: house80,
     area: "85 м²",
-    village: "Поселок КРП",
+    village: "Поселок КРП, 6 соток",
     price: "от 6 млн руб",
     description: "Идеальная альтернатива квартире",
     landIncluded: true,
@@ -35,8 +35,8 @@ const Projects = () => {
   }, {
     image: house100,
     area: "85 м²",
-    village: "Поселок Болдино Life",
-    price: "от 6 млн руб",
+    village: "Поселок Болдино Life, 8 соток",
+    price: "от 6.7 млн руб",
     description: "Идеальная альтернатива квартире",
     landIncluded: true,
     specs: [{
@@ -62,9 +62,9 @@ const Projects = () => {
   }, {
     image: house120,
     area: "100 м²",
-    village: "Поселок Болдино Life",
-    price: "от 8 млн руб",
-    description: "Идеальная альтернатива квартире",
+    village: "Поселок Болдино Life, 10 соток",
+    price: "от 7.8 млн руб",
+    description: "Семейный дом для комфортной жизни",
     landIncluded: true,
     specs: [{
       icon: Bed,
@@ -93,14 +93,14 @@ const Projects = () => {
     description: "Современный коттеджный поселок в 20 минутах от Перми. Развитая инфраструктура, асфальтированные дороги, центральные коммуникации. Идеально для семей, ценящих комфорт и природу.",
     features: ["Газификация", "Центральное водоснабжение", "Асфальтированные дороги", "Детская площадка"],
     status: "20 минут от Перми",
-    websiteUrl: "#"
+    websiteUrl: "https://boldino59.ru"
   }, {
     name: "КРП",
     image: villageKrp,
     description: "Перспективный проект с продуманной планировкой территории. Участки от 8 соток, все коммуникации подведены. Удобный выезд на федеральную трассу.",
     features: ["Электричество 15 кВт", "Скважина", "Асфальт до участка", "Охраняемая территория"],
     status: "20 минут от Перми",
-    websiteUrl: "#"
+    websiteUrl: "https://newland59.ru/krp"
   }];
   return <section id="projects" className="section-spacing bg-secondary/30">
       <div className="container-main">
