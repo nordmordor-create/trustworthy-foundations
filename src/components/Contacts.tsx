@@ -36,9 +36,9 @@ const Contacts = () => {
             <div className="space-y-6">
               <a 
                 href="tel:+79194406079"
-                className="flex items-center gap-4 text-lg hover:text-accent transition-colors group"
+                className="flex items-center gap-4 text-lg hover:text-accent transition-colors"
               >
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
                   <Phone className="w-5 h-5" />
                 </div>
                 <span>+7 (919) 440-60-79</span>
@@ -46,9 +46,9 @@ const Contacts = () => {
               
               <a 
                 href="mailto:mail@mtereh.ru"
-                className="flex items-center gap-4 text-lg hover:text-accent transition-colors group"
+                className="flex items-center gap-4 text-lg hover:text-accent transition-colors"
               >
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
                 <span>mail@mtereh.ru</span>
