@@ -53,10 +53,10 @@ const Projects = () => {
       text: "Газ (скоро)"
     }],
     priceOptions: [
-      { name: "Теплый контур", price: "6 млн руб." },
-      { name: "White Box", price: "7.1 млн руб." },
-      { name: 'Отделка "Комфорт"', price: "8.3 млн руб." },
-      { name: "С мебелью", price: "9.3 млн руб." }
+      { name: "Теплый контур", price: "6.7 млн руб." },
+      { name: "White Box", price: "7.8 млн руб." },
+      { name: 'Отделка "Комфорт"', price: "9 млн руб." },
+      { name: "С мебелью", price: "10 млн руб." }
     ],
     avitoLink: "#"
   }, {
@@ -80,10 +80,10 @@ const Projects = () => {
       text: "Газ (скоро)"
     }],
     priceOptions: [
-      { name: "Теплый контур", price: "6 млн руб." },
-      { name: "White Box", price: "7.1 млн руб." },
-      { name: 'Отделка "Комфорт"', price: "8.3 млн руб." },
-      { name: "С мебелью", price: "9.3 млн руб." }
+      { name: "Теплый контур", price: "7.8 млн руб." },
+      { name: "White Box", price: "9.1 млн руб." },
+      { name: 'Отделка "Комфорт"', price: "10.5 млн руб." },
+      { name: "С мебелью", price: "11.7 млн руб." }
     ],
     avitoLink: "#"
   }];

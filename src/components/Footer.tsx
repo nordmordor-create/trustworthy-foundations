@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
             <a href="#" className="text-sm opacity-60 hover:opacity-100 transition-opacity underline">
               Политика конфиденциальности
-            </a>
+            </a><br />
             <a href="#" className="text-sm opacity-60 hover:opacity-100 transition-opacity underline">
               Политика обработки персональных данных
             </a>
